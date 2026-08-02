@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video RAG Voice Assistant</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🎙️ Video RAG Voice Assistant</h1>
+      <p>Paste a YouTube link, let it transcribe, then ask it anything — by typing or by voice.</p>
+    </header>
+
+    <section class="video-panel">
+      <input
+        id="videoUrl"
+        type="text"
+        placeholder="Paste a YouTube URL, e.g. https://www.youtube.com/watch?v=..."
+      />
+      <button id="processBtn">Process Video</button>
+      <div id="videoStatus" class="status"></div>
+    </section>
+
+    <section id="chatSection" class="chat-panel hidden">
+      <div id="chatWindow" class="chat-window"></div>
+
+      <div class="chat-input-row">
+        <button id="micBtn" title="Ask by voice">🎤</button>
+        <input
+          id="questionInput"
+          type="text"
+          placeholder="Ask something about the video..."
+        />
+        <button id="sendBtn">Send</button>
+        <label class="voice-toggle">
+          <input type="checkbox" id="voiceOutputToggle" checked />
+          Speak answers
+        </label>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
